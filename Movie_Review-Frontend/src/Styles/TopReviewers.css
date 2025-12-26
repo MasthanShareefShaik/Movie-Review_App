@@ -1,0 +1,155 @@
+.leaderboard-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transform: perspective(1000px) rotateX(5deg);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+            overflow: hidden;
+        }
+.leaderboard-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(120deg, rgba(255,255,255,0.1) 0%, transparent 60%);
+    transform: skewX(-30deg);
+    pointer-events: none;
+}
+ .leaderboard-container:hover {
+            transform: perspective(1000px) rotateX(0deg);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+        }
+ .leaderboard-list {
+            list-style: none;
+        }
+ .leaderboard-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 15px 20px;
+            margin-bottom: 15px;
+            color: white;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            opacity: 0;
+            transform: translateX(-50px);
+            animation: slideIn 0.6s forwards;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+.leaderboard-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.03) translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes slideIn {
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+.leaderboard-item:nth-child(1) {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(255, 215, 0, 0.05));
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            animation-delay: 0.1s;
+            
+        }
+        
+.leaderboard-item:nth-child(2) {
+            background: linear-gradient(135deg, rgba(192, 192, 192, 0.2), rgba(192, 192, 192, 0.05));
+            border: 1px solid rgba(192, 192, 192, 0.3);
+            animation-delay: 0.2s;
+        }
+        
+.leaderboard-item:nth-child(3) {
+            background: linear-gradient(135deg, rgba(205, 127, 50, 0.2), rgba(205, 127, 50, 0.05));
+            border: 1px solid rgba(205, 127, 50, 0.3);
+            animation-delay: 0.3s;
+        }
+.rank {
+            font-weight: bold;
+            font-size: 1.3rem;
+            min-width: 50px;
+            text-align: center;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        
+.user {
+            flex-grow: 1;
+            margin-left: 15px;
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+.stats {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-align: right;
+            color: var(--text-primary);
+        }
+        
+.trophy {
+            display: inline-block;
+            margin-right: 5px;
+            animation: bounce 2s infinite;
+        }
+        
+@keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+        }
+        
+.leaderboard-item:nth-child(1) .rank {
+            color: gold;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+        }
+        
+.leaderboard-item:nth-child(2) .rank {
+            color: silver;
+            text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+        }
+        
+.leaderboard-item:nth-child(3) .rank {
+            color: #cd7f32;
+            text-shadow: 0 0 10px rgba(205, 127, 50, 0.5);
+        }
+        
+@media (max-width: 600px) {
+.leaderboard-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+            
+.user {
+                margin-left: 0;
+            }
+            
+.stats {
+                text-align: center;
+            }
+        }
+ @keyframes shine {
+            0% {
+                background-position: -200% 0;
+            }
+            100% {
+                background-position: 200% 0;
+            }
+        }

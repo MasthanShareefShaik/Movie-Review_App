@@ -1,0 +1,32 @@
+/* .like-section {
+  display: flex;
+  align-items:end;
+  gap: 8px;
+  margin-top: 5px;
+  margin-right: 50px;
+} */
+
+.like_button {
+  color: gray;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 25px;
+  transition: color 0.3s ease, transform 0.2s ease;
+  margin-right: 20px;
+}
+
+.like_button:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+.like_button:focus {
+  outline: none;
+}
+
+.like-count {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary)
+}

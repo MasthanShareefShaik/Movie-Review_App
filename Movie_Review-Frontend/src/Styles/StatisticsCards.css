@@ -1,0 +1,140 @@
+/* Vertical Stack */
+.static-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  margin: 0 90px;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+ .static-grid:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.15);
+        }
+
+/* Themed Info Card */
+.static-card {
+   background: linear-gradient(135deg, var(--card-bg) 0%, var(--static-card) 100%);
+            padding: 20px;
+            border-left: 4px solid var(--accent-color);
+            border-radius: 12px;
+             font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+            font-weight: 600;
+            color: var(--text-primary);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            position: relative;
+            overflow: hidden;
+}
+.static-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.269), transparent);
+            transform: translateX(-80%);
+        }
+/* Hover (optional) */
+  .static-card:hover {
+            background: linear-gradient(90deg, var(--static-card) 0%, var(--card-bg) 100%);
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .static-card:hover::before {
+            animation: shine 1s ease;
+        }
+         .static-card:nth-child(1) { animation-delay: 0.1s; }
+        .static-card:nth-child(2) { animation-delay: 0.2s; }
+        .static-card:nth-child(3) { animation-delay: 0.3s; }
+        .static-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .card-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            color: var(--accent-color);
+        }
+
+/* Slide-up Animation */
+  @keyframes slideInFade {
+            0% {
+                transform: translateX(-20px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+ @keyframes underlineGrow {
+            0% {
+                transform: scaleX(0);
+            }
+            100% {
+                transform: scaleX(1);
+            }
+        }
+         @keyframes starPopIn {
+            0% {
+                transform: scale(0);
+                opacity: 0;
+            }
+            50% {
+                transform: scale(1.2);
+            }
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+          @keyframes fadeInUp {
+            from {
+                transform: translateY(15px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }@keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        } @keyframes shine {
+            to {
+                transform: translateX(100%);
+            }
+        }
+@media (max-width: 600px) {
+  .static-grid {
+    padding: 15px;
+    gap: 15px;
+  }
+
+  .static-card {
+    font-size: 0.95rem;
+    padding: 16px;
+  }
+
+  .card-icon {
+    font-size: 1rem;
+  }
+}
+

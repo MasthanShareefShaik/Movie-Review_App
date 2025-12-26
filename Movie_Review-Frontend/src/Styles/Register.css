@@ -1,0 +1,136 @@
+.register_title{
+   text-align: center;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  font-size: 24px;
+  font-weight: 600;
+}
+.register_form {
+  max-width: 420px;
+  margin: 40px auto;
+  padding: 30px 25px;
+  border-radius: 12px;
+  background-color: var(--card-bg);
+  box-shadow: var(--shadow);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  animation: fadeInForm 0.6s ease-in-out;
+}
+
+.register_lable {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.register_input {
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+/* For Chrome, Safari, Edge, Opera */
+/* .register_input_number::-webkit-inner-spin-button,  */
+.register_input_number::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+/*for firefox*/
+.register_input_number {
+  -moz-appearance: textfield;
+}
+.register_input_number{
+  width: 100%;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+.register_input_number:focus{
+  border-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.3); /* accent color variant */
+  outline: none;
+  background-color: var(--input-bg);
+}
+.register_input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 6px rgba(102, 126, 234, 0.3); /* accent color variant */
+  outline: none;
+  background-color: var(--input-bg);
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  margin-right: 6px;
+  cursor: pointer;
+  transform: scale(1.1);
+  accent-color: var(--accent-color);
+}
+
+label + input[type="radio"] {
+  margin-left: 14px;
+}
+
+.register_submit {
+  width: 100%;
+  background-color: var(--btn-primary-bg);
+  color: var(--btn-primary-text);
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.register_submit:hover {
+  background-color: var(--btn-primary-hover);
+  transform: translateY(-1px);
+}
+
+.register_submit:active {
+  background-color: #3569ab; /* Optional: can create a new --btn-primary-active if needed */
+  transform: translateY(1px);
+}
+
+/* Fade-in animation */
+@keyframes fadeInForm {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 480px) {
+  .register_form {
+    margin: 20px 10px;
+    padding: 20px 15px;
+  }
+
+  .register_submit {
+    font-size: 15px;
+    padding: 10px;
+  }
+}

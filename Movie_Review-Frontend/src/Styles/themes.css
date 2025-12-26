@@ -1,0 +1,126 @@
+/* src/themes.css */
+
+:root {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --primary-color: #007bff;
+}
+[data-theme="light"] {
+  /* Core colors */
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --text-primary: #212529;
+  --text-secondary: #495057;
+  --text-muted: #888;
+  --accent-color: #667eea;
+  --border-color: #dee2e6;
+    /* Success colors */
+  --success-color: #28a745;
+  --success-hover: #218838;
+  
+  /* Error colors */
+  --error-color: #dc3545;
+  --error-bg: #f8d7da;
+  --error-border: #f5c6cb;
+
+  /* Header */
+  --header-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --header-text: white;
+  --logout-bg: white;
+  --logout-text: #004080;
+  
+  /* Buttons */
+  --btn-primary-bg: #667eea;
+  --btn-primary-text: white;
+  --btn-primary-hover: #5a6fd5;
+  --btn-secondary-bg: #f8f9fa;
+  --btn-secondary-text: #212529;
+  --btn-secondary-hover: #e9ecef;
+  --btn-disabled-bg: #ccc;
+  
+  /* Forms */
+  --input-bg: #ffffff;
+  --input-text: #212529;
+  --input-border: #dee2e6;
+  
+  /* Cards */
+  --card-bg: #ffffff;
+  --review-bg: #f9f9f9;
+  --static-card:rgb(122, 122, 240);
+  
+  /* Shadows */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  --shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.1);
+  
+  /* Status colors */
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --error-color: #dc3545;
+  --error-bg: #f8d7da;
+  --error-border: #f5c6cb;
+  --rating-color: #ffc107;
+}
+
+[data-theme="dark"] {
+  /* Core colors */
+  --bg-primary: #121212;
+  --bg-secondary: #1e1e1e;
+  --text-primary: #f8f9fa;
+  --text-secondary: #adb5bd;
+  --text-muted: #6c757d;
+  --accent-color: #6c8dfa;
+  --border-color: #444;
+   /* Success colors */
+  --success-color: #2ecc71;
+  --success-hover: #27ae60;
+  
+  /* Error colors */
+  --error-color: #e74c3c;
+  --error-bg: #2c0b0e;
+  --error-border: #721c24;
+
+  /* Header */
+  --header-bg: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  --header-text: #f8f9fa;
+  --logout-bg: rgba(255, 255, 255, 0.1);
+  --logout-text: white;
+  
+  /* Buttons */
+  --btn-primary-bg: #6c8dfa;
+  --btn-primary-text: white;
+  --btn-primary-hover: #5a6fd5;
+  --btn-secondary-bg: #2d2d2d;
+  --btn-secondary-text: #f8f9fa;
+  --btn-secondary-hover: #3d3d3d;
+  --btn-disabled-bg: #555;
+  
+  /* Forms */
+  --input-bg: #2d2d2d;
+  --input-text: #f8f9fa;
+  --input-border: #444;
+  
+  /* Cards */
+  --card-bg: #1e1e1e;
+  --review-bg: #2d2d2d;
+  --static-card:#2d2d2d;
+  /* Shadows */
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  --shadow-hover: 0 5px 15px rgba(0, 0, 0, 0.3);
+  
+  /* Status colors */
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --error-color: #dc3545;
+  --error-bg: #2c0b0e;
+  --error-border: #721c24;
+  --rating-color: #ffc107;
+}
+
+body {
+  background-color: var(--bg-primary);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+   line-height: 1.6;
+}
+
