@@ -9,7 +9,7 @@ public class MovieReviewApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MovieReviewApplication.class, args);
 		System.out.println("Server started/....");
-
+        System.out.println("First branch");
 
 	}
 
